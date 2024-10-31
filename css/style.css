@@ -47,6 +47,7 @@ p{
     flex-wrap: wrap;/*wrap place single line or multi lines in given space.*/ 
     justify-content: space-around;/*"Display the flex items with space before, between, and after the lines:"*/
 }
+
 .col-2{
     flex-basis: 50%;/*divide it into haif*/
     min-width: 300px;
@@ -112,6 +113,28 @@ p{
     margin-bottom: 50px;
     transition: transform 0.5s;/*when apply hover effect it will move image with 5sec delay*/
 }
+
+.col-4:hover img{
+    opacity:0.2;
+}
+
+.col-4:hover img + .butt{
+
+    display: block;
+}
+
+.butt{
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: #ff6f0f;
+    top: 50%;
+    left: 35%;
+    border: 1px;
+    display: none;
+}
+
 .col-4 img{
     width: 100%;/*each image occupies full column width*/
 }
@@ -313,9 +336,10 @@ ul{
 }
 /*All prodcuts page*/
 .row-2{
-    justify-content: space-between;/*create some space heading and selection panel*/
+    justify-content: space-between;
     margin: 100px auto 50px;
 }
+
 select{
     border: 1px solid #ff523b;/*create red border around dropdown select panel*/
     padding: 5px;
