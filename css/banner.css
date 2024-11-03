@@ -87,7 +87,10 @@
   header nav ul li:hover{
     color:#ff523b;
   }
-  
+  nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
   
   header nav ul:nth-child(2){
     height:auto;

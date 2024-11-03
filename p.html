@@ -7,7 +7,7 @@
     <!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
     <title>elevateFit | The #1 Ecommerce Website </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/banner.css">
+    <!--<link rel="stylesheet" href="css/Cart.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!--poppins font from google fonts website then select popping select some types and then embed-->
@@ -25,11 +25,249 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <!--- owl carsoul ---->
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.1s;
+  user-select: none;
+}
+
+/*--color shotcut--*/
+:root {
+  --orange: #ff523b;
+  --white: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+header nav {
+  background: rgb(0 0 0 / 30%);
+  color: var(--white);
+  display: flex;
+  position: relative;
+  padding: 25px 30px;
+}
+#nav {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 122;
+  background-color: rgb(7, 7, 7);
+}
+
+header nav .fa-bars,
+header nav .fa-remove {
+  display: none;
+}
+
+header nav img {
+  margin-right: 3em;
+  width: 120px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+header nav ul li {
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: #ff523b;
+}
+
+header nav ul:nth-child(2) {
+  height: auto;
+}
+
+header nav ul:nth-child(3) {
+  position: absolute;
+  top: 0%;
+  right: 30px;
+  font-weight: 100;
+}
+
+/*Cart styles*/
+
+/*Cart Items*/
+.cart-page {
+  margin: 80px auto;
+}
+table {
+  width: 100%; /*takes full width of the web page*/
+  border-collapse: collapse;
+}
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background: #ff523b;
+  font-weight: normal;
+}
+td {
+  padding: 10px 5px;
+}
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+td a {
+  color: #ff523b;
+  font-size: 16px;
+  cursor: pointer;
+}
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+td small {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end; /*put content with max width at the end, if flex start, then put content at start with max width as we mentioned max width below*/
+}
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 480px;
+}
+td:last-child {
+  text-align: right; /*align all last column values to right, in our case, these are prices*/
+}
+th:last-child {
+  text-align: right;
+}
+
+/*---- media queary min--0px & max--599px ----*/
+
+@media (min-width: 0px) and (max-width: 599px) {
+  header {
+    background-position: center;
+    background-size: cover;
+  }
+
+  header nav ul:nth-child(2) {
+    background: rgba(0, 52, 82, 0.15);
+    color: var(--white);
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: left;
+    padding: 30px 30px;
+    transition: all 0.5s;
+    position: absolute;
+    left: -162px;
+    top: 92px;
+  }
+
+  header nav ul:nth-child(2):after {
+    content: "\27A7";
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  header nav ul:nth-child(2):after:hover {
+    color: #ff523b;
+  }
+
+  header nav ul:nth-child(3) {
+    background: rgba(0, 52, 82, 0.15);
+    color: var(--white);
+    display: block;
+    right: 0;
+    top: 92px;
+    width: 200px;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  header nav ul:nth-child(3) li {
+    margin: 5px 0;
+  }
+
+  header nav ul:nth-child(3) li:nth-child(1) {
+    margin-top: 30px;
+  }
+
+  header nav ul:nth-child(3) li:nth-child(5) {
+    margin-bottom: 30px;
+  }
+
+  header nav .fa-bars,
+  header nav .fa-remove {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  header nav .fa-bars:hover,
+  header nav .fa-remove:hover {
+    color: #ff523b;
+  }
+}
+
+
+
+.cartProductStyle{
+  display: flex;
+  flex-direction: row;
+}
+.cartProductStyleP{
+  display: flex;
+  flex-direction: column;
+}
+.cartProductStyle{
+  display: flex;
+  flex-direction: row;
+}
+.cartProductStyleP{
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-info p {
+    display: none; /*hide product name in smaller screen*/
+  }
+}
+    </style>
 </head>
-<!-------footer------->
+
 <body>
-       <!--making header-->
-       <section class="head">
+
+    <!--making header-->
+    <header>
 
         <nav id="nav">
 
@@ -37,14 +275,14 @@
 
             <ul class="menu-bar-side">
                 <li><a href="index.html" style=" all: unset;">Home</a></li>
-                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+                <li><a href="test.html" style=" all: unset;">Shope</a></li>
                 <li><a href="#" style=" all: unset;">about</a></li>
                 <li><a href="#" style=" all: unset;">contact us</a></li>
             </ul>
 
             <ul class="menu-bar">
 
-                <li>&#36;0.00</li>
+                <li id="cart-header-total-price">&#36;0.00</li>
                 <li><i class='fas fa-shopping-cart'></i></li>
 
             </ul>
@@ -53,32 +291,81 @@
         </nav>
 
 
-    </section>
+
+
+    </header>
     <!--- end header --->
 
+
+    <!-- Cart Page Structure -->
+
+
+
+    <div class="cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tbody id="cart-items"></tbody>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="total-subtotal">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="tax">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total-price">$0.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-------footer------->
     <div class="footer">
         <div class="container">
             <div class="row">
-    
-    
+
+
                 <div class="footer-col-1">
                     <h3>Download Our App</h3>
                     <p>Download App for Android and Ios mobile phone.</p>
-    
-    
+
+
                     <div class="app-logo">
                         <img src="images/play-store.png">
                         <img src="images/app-store.png">
                     </div>
-    
+
                 </div>
-    
+
                 <div class="footer-col-2">
                     <img src="images/logo-white.png">
                     <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.
                     </p>
                 </div>
-    
+
                 <div class="footer-col-3">
                     <h3>Useful Links</h3>
                     <ul>
@@ -87,9 +374,9 @@
                         <li>Return Policy</li>
                         <li>Join Affiliate</li>
                     </ul>
-    
+
                 </div>
-    
+
                 <div class="footer-col-4">
                     <h3>Follow Us</h3>
                     <ul>
@@ -98,7 +385,7 @@
                         <li>Instagram</li>
                         <li>Youtube</li>
                     </ul>
-    
+
                 </div>
             </div>
             <!--add horizontal line and copyright text along with clickable link-->
@@ -107,7 +394,8 @@
         </div>
     </div>
     
-    <!-----------------JS----------------------->
-        
+    <!-- Main script -->
+    <script src="main.js"></script>
 </body>
+
 </html>
