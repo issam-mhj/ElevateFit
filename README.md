@@ -1,64 +1,74 @@
-# ElevateFit - Front-end Development Project
+<div align="center">
+<h3 align="center">ElevateFit - E-commerce Website</h3>
 
-## Contexte du Projet
+  <p align="center">
+    A front-end project to create a responsive e-commerce website for fitness apparel and accessories.
+    <br />
+     <a href="https://issam-mhj.github.io/elevatefit/">ElevateFit Demo</a>
+  </p>
+</div>
 
-**Objectif :**  
-Nous recherchons un développeur Front-end compétent pour rendre le site **ElevateFit** réactif en ajoutant des breakpoints et en intégrant des composants interactifs afin d'améliorer l'engagement des utilisateurs.
+## Table of Contents
 
----
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-## User Stories
+## About The Project
 
-### 1. Page de Produits
-- En tant qu'utilisateur, je veux pouvoir voir une liste de vêtements, avec la possibilité de filtrer par catégorie pour trouver les articles qui m'intéressent.
-- En tant qu'utilisateur, je souhaite pouvoir filtrer les vêtements par plage de prix afin de voir seulement les articles dans mon budget.
-- En tant qu'utilisateur, je souhaite que le bouton "Ajouter au panier" ait un effet "hover" pour confirmer visuellement mon action.
+ElevateFit is a front-end development project focused on creating a responsive and interactive e-commerce website for fitness-related products. The project aims to provide users with a seamless shopping experience, featuring product listings, detailed product views, a shopping cart, and a checkout page. The site incorporates user stories related to product filtering, responsive navigation, and interactive elements to enhance user engagement.
 
-### 2. Page de Détail Produit
-- En tant qu'utilisateur, je veux pouvoir cliquer sur un vêtement pour voir ses détails, comme le prix, la description, les images et les avis clients, afin d'obtenir plus d'informations avant de décider d'acheter.
+### Key Features
 
-### 3. Page de Panier
-- En tant qu'utilisateur, je souhaite ajouter des articles au panier pour revoir et confirmer ma sélection avant de passer à l'achat.
-- En tant qu'utilisateur, je veux pouvoir voir le total des prix des articles ajoutés dans mon panier, mettre à jour les quantités ou supprimer des articles si nécessaire.
+- **Product Listing and Filtering:** Users can view a list of clothing items and filter them by category and price range.
+- **Product Details:** Clicking on a product displays detailed information, including price, description, images, and customer reviews.
+- **Shopping Cart:** Users can add items to a cart, view the total price, update quantities, and remove items.
+- **Responsive Navbar:** The navigation bar adapts to different screen sizes for easy mobile navigation.
+- **Interactive Elements:** "Add to cart" buttons have hover effects, and a price range slider allows users to filter products based on their budget.
 
-### 4. Page de Paiement (Checkout)
-- En tant qu'utilisateur, je souhaite une page de paiement où je peux remplir mes informations pour finaliser mon achat.
-- En tant qu'utilisateur, je souhaite que tous les champs requis soient validés pour éviter les erreurs, afin de m'assurer que les informations sont complètes avant de soumettre la commande.
+## Architecture
+The ElevateFit project is structured with the following technologies:
 
-### 5. Navbar Responsive
-- En tant qu'utilisateur, je souhaite que la barre de navigation s'adapte aux petits écrans pour naviguer facilement sur mobile.
+- **HTML:** Provides the structure and content of the web pages.
+- **CSS:** Styles the HTML elements, ensuring a visually appealing and responsive design.  The project uses multiple CSS files for different sections, including banner styles, detail page styles, and general styles.
+- **JavaScript:** Implements interactive elements and dynamic functionality, such as product filtering and cart management.  jQuery is used in `index.html` and `p.html`.
+- **Font Awesome:** Provides icons for various UI elements.
+- **Google Fonts (Poppins):** Used for consistent typography across the website.
 
----
+## Getting Started
 
-## Pages Bonus
+To run the ElevateFit project locally, follow these steps:
 
-### 6. Page Wishlist
-- En tant qu'utilisateur, je souhaite enregistrer mes vêtements favoris dans une liste de souhaits pour les retrouver facilement plus tard.
+### Prerequisites
 
-### 7. Pages de Connexion, Inscription & Profil
-- En tant qu'utilisateur, je veux pouvoir m'inscrire et créer un compte pour gérer mes commandes et mon profil.
-- En tant qu'utilisateur enregistré, je souhaite me connecter pour accéder à mes informations personnelles et à mon historique d'achats.
+- A web browser (e.g., Chrome, Firefox, Safari)
+- A text editor or IDE (e.g., VS Code, Sublime Text)
 
----
+### Installation
 
-## Recommandations
-
-1. **Utilisation des unités relatives :** Utilisez des unités de mesure relatives comme les pourcentages et les unités `em` plutôt que des valeurs fixes en pixels pour faciliter l'adaptabilité.
-
-2. **Optimisation du DOM :** Évitez la manipulation directe du DOM lorsque cela n'est pas nécessaire. Privilégiez les modifications par classe, attribut ou contenu, plutôt que de créer des éléments à partir de zéro.
-
-3. **Débogage et inspection :** Utilisez les outils de développement du navigateur pour inspecter et déboguer le DOM et le CSS en temps réel.
-
-4. **Images adaptatives et optimisées :**
-   - Utilisez des images adaptatives avec la balise `<img srcset>` pour garantir une qualité optimale.
-   - Compressez les images pour réduire la taille des fichiers tout en maintenant une qualité visuelle élevée.
-
-5. **Conformité aux normes d'accessibilité :**
-   - Assurez-vous que le site respecte les normes WCAG (Web Content Accessibility Guidelines) pour une expérience inclusive.
-   - Utilisez des outils d'audit d'accessibilité tels que **Axe** ou **Lighthouse** pour identifier et corriger les problèmes.
-
-6. **Tests sur divers appareils et résolutions :** Vérifiez que le site s'adapte correctement aux différents appareils et résolutions.
-
-7. **Conformité avec les normes web actuelles :** Assurez-vous que le site est compatible avec les dernières normes web pour une meilleure longévité.
-
-8. **Structure de code modulaire :** Mettez en place une structure de code modulaire et bien documentée pour faciliter la maintenance future.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/issam-mhj/elevatefit.git
+   ```
+2. **Navigate to the project directory:**
+   ```sh
+   cd elevatefit
+   ```
+3.  **Open `index.html` or `Products.html` in your web browser:** Simply double-click the file or right-click and choose "Open with" your preferred browser.
